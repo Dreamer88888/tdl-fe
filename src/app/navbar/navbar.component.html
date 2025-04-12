@@ -1,0 +1,32 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-body-tertiary">
+    <div class="container">
+      <a *ngIf="userName" class="navbar-brand me-2" routerLink="project">
+        <img
+          [src]="imagePath"
+          height="50"
+          alt="EMMA Logo"
+        />
+      </a>
+      <a *ngIf="!userName" class="navbar-brand me-2">
+        <img
+          [src]="imagePath"
+          height="50"
+          alt="EMMA Logo"
+        />
+      </a>
+  
+      <div class="navbar-container" id="navbarButtonsExample">
+        <ul class="navbar-nav">
+          <li *ngIf="userName" class="nav-item">
+            <p class="nav-link">Welcome, {{userName}}</p>
+          </li>
+          <li *ngIf="!userName" class="nav-item">
+            <a class="nav-link" routerLink="login">Login</a>
+          </li>
+          <li *ngIf="userName" class="nav-item" (click)="logout()">
+            <a class="nav-link">Logout</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>

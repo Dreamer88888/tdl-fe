@@ -1,0 +1,39 @@
+<div class="container project-container text-center mt-5 mb-5">
+    <div class="container mb-4">
+        <h1 [innerHTML]="title"></h1>
+    </div>
+
+    <div class="floating-container">
+        <div class="floating-button">
+            <a class="nav-link" (click)="addProject()">Add</a>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-4" *ngFor="let project of projects">
+            <div class="card grow mb-2 mt-2 project" (click)="projectById(project.id)" [ngClass]="progressClass(project.progress)">
+                <div class="card-body">
+                    <h5 class="card-title mt-3 mb-3">{{project.title}}</h5>
+                    <!-- <div [ngClass]="progressClass(project.progress)"> -->
+                        <!-- <p class="card-text">{{ project.progress }}</p> -->
+                    <!-- </div> -->
+                    <div>
+                        <i class="bi bi-pencil-fill bi-black"></i>
+                        {{ project.createdAt | date:'dd/MM/yyyy' }}
+                    </div>
+                    <div>
+                        <i class="bi bi-alarm bi-black"></i>
+                        {{ project.dueAt | date:'dd/MM/yyyy' }}
+                    </div>
+                    
+                    <button class="btn btn-update mt-3 mb-3" (click)="updateProject(project.id)">
+                        <i class="bi bi-pencil-square"></i>
+                        Update</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+  
+
+

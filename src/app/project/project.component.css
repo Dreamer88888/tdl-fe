@@ -1,0 +1,123 @@
+h1 {
+    font-weight: bold;
+}
+
+/* .project-container {
+  height: 0vh;
+} */
+
+.todo {
+    background-color: #FAD4D4;
+}
+
+.todo:hover {
+  background-color: #F8A5A5;
+}
+
+.in {
+    background-color: #FFE6CC;
+}
+
+.in:hover {
+  background-color: #FFD1A3;
+}
+
+.done {
+    background-color: #D5F5E3 ;
+}
+
+.done:hover {
+  background-color: #BDEAC5;
+}
+
+.card-title {
+  font-weight: bold;
+}
+
+.btn-update {
+  background-color: #17A2B8;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 20px;
+  height: 50px;
+  width: 150px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-update:hover {
+  background-color: #138496;
+  transform: translateY(-2px);
+}
+
+.bi {
+  font-size: 18px;
+  color: #fff;
+  margin-right: 5px;
+}
+
+.bi-black {
+  color: black;
+}
+
+.btn-update:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.2rem rgba(23, 162, 184, 0.5);
+}
+
+.grow {
+    transition: all .2s ease-in-out;
+}
+
+.grow:hover {
+    transform: scale(1.1);
+}
+
+.project {
+  border: none;
+}
+
+.project:hover {
+  cursor: pointer;
+}
+
+.floating-container {
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  bottom: 0;
+  right: 0;
+  margin: 35px 25px;
+  margin-bottom: 130px;
+}
+.floating-container:hover {
+  height: 300px;
+}
+.floating-container:hover .floating-button {
+  box-shadow: 0 10px 25px rgba(44, 179, 240, 0.6);
+  -webkit-transform: translatey(5px);
+          transform: translatey(5px);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.floating-container .floating-button {
+  position: absolute;
+  width: 65px;
+  height: 65px;
+  background: #2cb3f0;
+  bottom: 0;
+  border-radius: 50%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  color: white;
+  line-height: 65px;
+  text-align: center;
+  font-size: 16px;
+  z-index: 100;
+  box-shadow: 0 10px 25px -5px rgba(44, 179, 240, 0.6);
+  cursor: pointer;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}

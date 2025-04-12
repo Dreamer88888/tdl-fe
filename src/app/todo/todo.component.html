@@ -1,0 +1,12 @@
+<div class="container text-center mt-5">
+    <h1>{{ projectResponse.project.title }}</h1>
+    <div class="container mt-3">
+        <p>Created At: {{ projectResponse.project.createdAt | date:'dd/MM/yyyy' }}</p>
+        <p>Due Date: {{ projectResponse.project.dueAt | date:'dd/MM/yyyy' }}</p>
+        <p>Progress: {{ projectResponse.project.progress }}</p>
+    </div>
+    <div class="container">
+        <button class="btn btn-primary" (click)="addToDo()">Add To Do</button>
+    </div>
+    <app-todo-list></app-todo-list>
+</div>

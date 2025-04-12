@@ -1,0 +1,25 @@
+<div class="col-md-6 offset-md-3">
+    <div class="text-center">
+        <h3>Add To Do</h3>
+    </div>
+
+    <form (ngSubmit)="addToDo()">
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id="name" [(ngModel)]="toDoRequest.name" [ngModelOptions]="{standalone: true}">
+        </div>
+        <div class="form-group">
+            <label for="description">Description</label>
+            <input type="text" class="form-control" id="description" [(ngModel)]="toDoRequest.description" [ngModelOptions]="{standalone: true}">
+        </div>
+        <div class="form-group">
+            <label for="date">Due Date</label>
+            <input type="date" class="form-control" id="date" [(ngModel)]="toDoRequest.date" [ngModelOptions]="{standalone: true}">
+        </div>
+        <div class="text-center">
+            <button class="btn btn-primary" type="submit">Add</button>
+        </div>
+        
+    </form>
+
+</div>
